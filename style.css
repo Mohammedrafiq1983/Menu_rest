@@ -1,0 +1,67 @@
+/* styles.css */
+
+  body, html {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+body {
+  background-image: url('/rest.jpg');
+  background-size:cover;
+  background-position:center;
+  background-repeat: repeat;
+}
+
+#container {
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;  /* You can set your own width */
+  height: 260px;  /* You can set your own height */
+  background-color: #f15e44b0;  /* Background color */
+  margin:15px;
+}
+
+
+#first-row, #third-row, #forth-row, #fifth-row, #sixth-row{
+  
+     width: 95%;
+     height: 40px;
+     display: flex;
+     flex-direction: row-reverse;
+     align-items: center;
+     text-align: right;
+     border: 4px;
+     box-shadow: 10px;
+     margin:10px;
+     /* margin: 10px, 0px, 10px, 0px; */
+}
+
+  #menu-one, #menu-two, #menu-three, #menu-four, #menu-five{
+               display: none;
+               grid-template-columns: 1fr 1fr; 
+               place-items: center;
+               background-color: rgba(0, 0, 0, 0.742);
+          }
+
+
+
+.plus {
+     width: 4%;
+     height: 55%;
+     margin-right: 10px;
+ }
+
+ P {
+  font-family: 'Georgia', serif;
+  font-size: 15px;
+  font-weight: bolder;
+  color: #f6f601ea;
+  padding: 5px;
+  
+}
+
+
+

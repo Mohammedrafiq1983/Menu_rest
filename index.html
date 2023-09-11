@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+     <div id="container"> <!-- main div that contain all other divs -->
+          
+          
+          <div id="first-row" style="background-color: rgba(137, 43, 226, 0.8);"> 
+               <img class="plus" src="/plus.png" onclick="toggleMenu('menu-one')"> 
+          </div>
+                    <div id="menu-one"  class="hide">
+                         <p>Shawrma:  3000 IQD</p>
+                         <P>Pizza:    5000 IQD</p>
+                         <p>Falafel:  1500 IQD</p>
+                         <p>Kentaki:  8000 IQD</p>
+                    </div>
+
+
+          <div id="third-row" style="background-color: rgba(255, 235, 205, 0.8); "> 
+               <img class="plus" src="/plus.png" onclick="toggleMenu('menu-two')">
+          </div>
+      
+                    <div id="menu-two" class="hide">
+                         <P>Qozi Alsham: 7000 IQD</p>
+                         <p >Saj Itali:   2000 IQD</p>
+                         <p>Rezo bel Aljibn:   3500 IQD</p>
+                         <p>Bryani:  6000 IQD</p>
+                    </div>
+
+          <div id="forth-row" style="background-color: rgba(19, 197, 224, 0.8);"> 
+               <img class="plus" src="/plus.png" onclick="toggleMenu('menu-three')">
+          </div>
+      
+                    <div id="menu-three" class="hide">
+                         <P>Qozi Alsham: 7000 IQD</p>
+                         <p >Saj Itali:   2000 IQD</p>
+                         <p>Rezo bel Aljibn:  3500 IQD</p>
+                         <p>Bryani:  6000 IQD</p>
+                    </div>
+
+          <div id="fifth-row" style="background-color: rgba(166, 39, 153, 0.8)"> 
+               <img class="plus" src="/plus.png" onclick="toggleMenu('menu-four')">
+          </div>
+      
+                    <div id="menu-four" class="hide">
+                         <P>Azgara : 12000 IQD</p>
+                         <p >Saj Itali:   2000 IQD</p>
+                         <p>Rezo bel Aljibn:  3500 IQD</p>
+                         <p>Kabab:  6000 IQD</p>
+                    </div>
+
+          <div id="sixth-row" style="background-color: rgba(116, 11, 23, 0.8);"> 
+               <img class="plus" src="/plus.png" onclick="toggleMenu('menu-five')">
+          </div>
+      
+                    <div id="menu-five" class="hide">
+                         <P>Azgara : 12000 IQD</p>
+                         <p >Saj Itali:   2000 IQD</p>
+                         <p>Rezo bel Aljibn:  3500 IQD</p>
+                         <p>Kabab:  6000 IQD</p>
+                    </div>
+
+           
+     </div>
+
+
+                  
+</body>
+
+<script>
+ function toggleMenu(menuId) {
+          // First, set all divs with class 'hide' to display: none
+          const allMenus = document.querySelectorAll('.hide');
+          let isSameMenuClicked = false; // Flag to check if the same menu is clicked
+
+          allMenus.forEach((menu) => {
+               if (menu.id === menuId && menu.style.display === 'grid') {
+                    isSameMenuClicked = true; // Set the flag to true if the same menu is clicked and is already displayed
+                    document.getElementById("container").style.height = "260px";
+               }
+               menu.style.display = 'none';
+          });
+
+          // Set the height of the container div to 400px
+         
+
+          // Then, set the clicked div to display: grid, unless it's the same one that was already displayed
+          const menu = document.getElementById(menuId);
+          if (!isSameMenuClicked) {
+               menu.style.display = 'grid';
+                document.getElementById("container").style.height = "400px";
+          }
+     }
+
+</script>
+</html>
